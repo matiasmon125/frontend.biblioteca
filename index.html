@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='estilo.css'>
+</head>
+
+<body>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Catalogo</a>
+            <a href="#socios">Hacete Socio</a>
+            <a href="#contacto">Contacto</a>
+            
+        </nav>
+      
+ 
+    <section class="hero" id="inicio">
+
+        <h2>venta de libros digitales</h2>
+        <p>pagina virtual oficial</p>
+        <p>hacete socio y ten beneficios</p>
+    </section>
+
+
+    
+<select id="categorias">
+            <option>¿qué te gustaría leer?</option>     
+            <option>Novelas</option>
+            <option>Historia</option>
+            <option>Ciencia</option>
+            </select>
+            
+
+    <section class="hero" id="catalogo">
+
+        <!-- LIBRO 1 -->
+        <div class="libro" data-categoria="Novelas">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjABY3qT514hAB8KZhn-fROp2sjTy2a7cZTxrFq1xOe-0meVwpuo-iP_o&s=10" alt="alicia en el pais de las maravillas">
+            <h3>alicia en el pais de las maravillas</h3>
+            <p>autor:lewis carroll</p>
+            <p class="precio">Disponible</p>
+    <p>$5000</p>
+    <button onclick="reservarLibro(this)">Reservar Libro</button>
+    <button onclick="agregarCarrito(this)">Agregar al carrito</button>
+            
+        </div>
+
+        <!-- LIBRO 2 -->
+          
+        <div class="libro" data-categoria="Historia">
+            <img src="https://www.ldrsport.com/6136-home_default/messi-edicion-revisada-y-actualizada-2022.jpg" alt="la historia del 10">
+            <h3>la historia del 10</h3>
+            <p>autor:pablo gimenez</p>
+            <p class="precio">Disponible</p>
+            <p>$7000</p>
+            <button onclick="reservarLibro(this)">Reservar Libro</button>
+            <button onclick="agregarCarrito(this)">Agregar al carrito</button>
+        </div>
+
+        <!-- LIBRO 3 -->
+    
+        <div class="libro" data-categoria="Ciencia">
+            <img src="https://proassets.planetadelibros.com.ar/usuaris/libros/fotos/349/original/348917_portada_el-poder-de-la-ciencia_jose-manuel-sanchez-ron_202202141058.jpg" alt="libro de ciencias">
+            <h3>libro de ciencias</h3>
+            <p>J.K. Rowling</p>
+            <p class="precio">Disponible</p>
+            <p>$8000</p>
+            <button onclick="reservarLibro(this)">Reservar Libro</button>
+            <button onclick="agregarCarrito(this)">Agregar al carrito</button>
+            
+        </div>
+        <!-- LIBRO 4 -->
+          
+        <div class="libro" data-categoria="Historia">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREv6AJfiWtBAIGTeq2smKNckSe-lRsvVIrxog-xwd_wrnl1kBfLzV0aRk&s=10" alt="historia argentina">
+            <h3>la historia de argentina</h3>
+            <p>Miguel de Cervantes</p>
+            <p class="precio">Prestado</p>
+            <p>$6000</p>
+            <button onclick="reservarLibro(this)">Reservar Libro</button>
+            <button onclick="agregarCarrito(this)">Agregar al carrito</button>
+        </div>
+
+        <section id="carrito">
+    <h2>🛒 Mi carrito</h2>
+    <ul id="lista-carrito"></ul>
+    <p>Total: $<span id="total">0</span></p>
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
+</section>
+
+<section id="socios">
+    <h2>Registro de socios</h2>
+
+    <input type="text" id="nombre" placeholder="Tu nombre">
+    <input type="email" id="correo" placeholder="Tu correo">
+    <input type="password" id="clave" placeholder="Tu contraseña">
+
+    <button onclick="registrarSocio()">Registrarme</button>
+
+    <p id="mensaje"></p>
+</section>
+
+
+
+<section id="cantidad-socios">
+
+    <h2>Socios de nuestra biblioteca</h2>
+
+    <p>
+        Cantidad de socios registrados:
+        <strong><?php echo $cantidadSocios; ?></strong>
+    </p>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    <footer id="contacto">
+        <p>libros digitales
+            puedes alquilarlos o comprarlos 
+        </p>
+        <p>Instagram: @biblioteca.digital | WhatsApp: 11325777 | Email: llevate un libro.com</p>
+    </footer>
+    
+
+
+
+
+    
+    <script src="listado.js"></script>
+
+</body>
+</html>
+
+    
